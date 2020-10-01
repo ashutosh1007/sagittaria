@@ -1,0 +1,259 @@
+/**
+ * styles.css
+ * Contains CSS for basic static website named "Saggitaria"
+ */
+
+/* =========================================
+    Default Theme
+    ----------------------------------------
+    Fonts: Josefin Sans & Open Sans
+    ----------------------------------------
+    Colors:
+        :          #
+============================================ */
+
+/**********************************************
+                    GENERAL
+**********************************************/
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Hide scrollbars */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color:#054A29;
+    text-transform: uppercase; 
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    padding-top: 1.5em
+}
+
+p{
+    font-family: 'Open Sans';
+    font-size: 1.1em;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+
+/*Navbar Styling*/
+.nav-link{
+    color: black !important;
+    font-weight: 500;
+    letter-spacing: 1px
+} 
+
+/**********************************************
+                    HOME SECTION 
+**********************************************/
+.parallax {
+    background-color: #7ABA42;
+    background: url("../images/background-4.png") no-repeat fixed center;    
+    background-size: cover;
+    padding-bottom: 2em;
+}
+
+.product-image{
+    background: url("../images/product-bg-1.jpg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+}
+
+/**********************************************
+                    FOOTER
+**********************************************/
+#footer{
+    background-color: #0D171A; /*Rich Black FOGRA 29*/
+    color: white;
+    padding: 5em 2em 3em 5em;
+}
+
+
+.footer-h5{
+    color: #4ebc3a; 
+    font-weight: bold
+}
+
+.footer-li{
+    list-style: none;
+    margin-left: -2em;
+    font-family: 'Open Sans';
+    font-size: 1.1em;
+    font-weight:500;
+    letter-spacing: 1px;
+}
+
+#footer-email{
+    padding: 0.7em;
+    width: 75%;
+    border-radius: 0.5em;
+    border-bottom: none;
+}
+
+#footer-email:focus{
+    outline: none;
+}
+
+.footer-icon{
+    color: #4ebc3a;
+}
+
+.footer-horizontal-line{ 
+    margin-right: 3em;
+    border:1px solid #849e42;
+}
+
+/**********************************************
+            ABOUT US - EXPERIENCE
+**********************************************/
+.experiences-card{
+    background-color: #084734;
+    color: white;
+    opacity: 0.9; 
+}
+
+.experiences-h2{
+    font-weight: bold;
+    margin: -2em 0 1em;
+    color: white;
+}
+
+.experiences-p-style{
+    width: 100%; 
+    margin: -2em auto 0.1em;
+    text-align: center;
+}
+
+.experiences-pm{
+    padding: 2.5em;
+    margin: 1.5em 2.7em ;
+}
+
+/**********************************************
+                    CONTACT US
+**********************************************/
+
+#contact-form{
+    background-color: white;
+    padding: 2em;
+    border-radius: 10px;
+    border: 1px dashed lightgrey !important; 
+    
+}
+
+#contact-form-h4{
+    margin-top: -2em;
+}
+
+input[type="text"], [type="email"], [type="number"]{
+    border: none;
+    border-bottom: 1px dashed lightgrey;
+    letter-spacing: 2px;    
+    
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+textarea{
+    border: none !important;     
+    border-bottom: 1px dashed lightgrey !important; 
+    letter-spacing: 2px; 
+}
+
+.form-control:focus{
+    outline: none !important; 
+    box-shadow: none;
+}
+
+/**********************************************
+                CONTACT US-BOTTOM
+**********************************************/
+
+.contact-styles{
+     border: 1px dashed lightgrey;
+}
+
+.contact-horizontal-line{
+    width: 7em;
+    border-bottom:3px groove black;
+}
+
+/**********************************************
+                    PRODUCTS
+**********************************************/
+
+.portfolio-item img{
+    transition: all .4s ease;
+}
+
+/*Portfolio Hover*/
+.portfolio-item:hover img{
+    transform: scale(1.2);
+}
+
+.portfolio-item:hover {
+    opacity: 1;
+}
+
+.portfolio-item:hover {
+    transform: translateY(0);
+}
+
+/*ISOTOPE FLITERS*/
+#isotope-filters button{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: none;
+    outline: 0;
+    background: transparent;
+    padding-right: 35px;
+    letter-spacing: 1px;
+}
+
+#isotope-filters button span{
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: solid 3px transparent;
+    transition: border-bottom .4s ease;
+}
+
+#isotope-filters button.active span{
+    color: #5C9320;
+    border-bottom: solid 3px #5C9320;
+}
+
+/**********************************************
+                    CUSTOM STYLES
+**********************************************/
+
+.p-styles{
+    width: 75%; 
+    margin: auto;
+    text-align: center;
+}
+
+.horizontal-line{ 
+    width: 5em;
+    border:5px solid black; 
+    background-color: black;
+}
+
+.text-color-white{
+    color: white;
+}
+
+.heading-color-white{
+    color: white;
+}

@@ -14,62 +14,31 @@
 ?>
 
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Home</title>
-    
-     <!--CUSTOM CSS-->
-    <link rel="stylesheet" href="vendors/css/styles.css">
-    
-    <!--BOOTSTRAP-->
-    <link rel="stylesheet" href="vendors/css/bootstrap/bootstrap.min.css">
-    
-    <!--FONT AWESOME-->
-    <link rel="stylesheet" href="vendors/css/fontawesome/css/all.css">
-    
-    <!--CUSTOM FONTS-->
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-</head>
-<body>
+    <?php include_once('includes/header.php');
+    ?>
+   <body>
     <!--Navbar Section-->
-    <nav class="navbar navbar-expand-lg navbar-light" role="navigation"> 
-       <a class="navbar-brand" href="#"><img src="vendors/images/Final-green-logo.jpg" alt="" width="100px" height="75px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav navbar-nav ml-auto mr-5">
-                <li class="nav-item active mx-5"> <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
-                <li class="nav-item mx-5"> <a class="nav-link" href="about-us.html">About Us</a> </li>
-                <li class="nav-item mx-5"> <a class="nav-link" href="">CSR</a> </li>
-                <li class="nav-item mx-5"> <a class="nav-link" href="products.php">Products</a> </li>
-                <li class="nav-item mx-5"> <a class="nav-link" href="contact-us.php">Contact Us</a> </li>
-            </ul>
-        </div>
-    </nav>
+ <?php include_once('includes/navbar.php');
+    ?>
     <!--End of Navbar section-->  
-    
+
     <!--Parallax Image-->
-        <div class="parallax" style="height: 100%">
+           <div class="parallax">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4"> </div>
-                    <div class="col-md-8">
-                        <!--<img src="vendors/images/background.png" alt="">-->
+                    <div class="col-md-4" id="caption">
+                        <div class="row caption">REDUCE</div>
+                        <div class="row caption">RECYLE</div>
+                        <div class="row caption">REUSE</div>
+                    </div>
+                    <div class="col-md-8" id="image">
+                        <img class="mySlides animated fadeIn"  src="vendors/images/hand-bag-1.png" height="400px">
+                        <img class="mySlides animated fadeIn"  src="vendors/images/hand-bag-2.png" height="400px">
+                        <img class="mySlides animated fadeIn"  src="vendors/images/hand-bag-3.png" height="400px">
                     </div>
                 </div>
             </div>
-        </div>
+           </div>
     <!--End of Parallax Image-->
     
     <!--What we Do section-->
@@ -97,13 +66,19 @@
                 Our Designs
             </h1>
             <hr class="horizontal-line">
-            <p class="p-styles"> 
+            <p class="p-styles" style="padding-bottom: 1em"> 
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas inventore laboriosam provident voluptatibus in, fugiat non praesentium? Odio, fuga. Excepturi, illo officia. Eveniet recusandae dicta possimus, quae. Nam, neque, reiciendis. </p>
         </div>
     </section>
     <!--End of Designs Section-->
-        
-    <!--Certifications Section-->
+      
+    <!--Certifications Section-->  
+    <?php
+       if($row == 0){
+           
+       }else{
+    ?>
+  
     <section id="certifications" class="mb-4">
         <div class="container">
             <h1 class="text-center">
@@ -111,6 +86,7 @@
             </h1>
             <hr class="horizontal-line">
               <p class="p-styles"> 
+              
               <?php echo $certificate_info; ?>
             </p>
             <?php
@@ -118,47 +94,37 @@
             ?>
                 <img src="admin/images/<?php echo $certificate['certificate_image']; ?>" class="mx-2 my-2" alt="" width="150px" height="100px">
             <?php 
-                } 
+                }
+       }
             ?>
         </div>
     </section>
     <!--End of Certifications Section-->
     
     <!--Footer Section-->
-    <div id="footer">
-        <div class="row">
-            <div class="col-md-5">
-                <h5 class="footer-h5">Contact Us</h5>
-                <div>
-                    <ul>
-                        <li class="footer-li"><span><i class="fas fa-map-marker-alt fa-lg footer-icon pr-1"></i></span>307, CRESCENT BUSINESS PARK,</li>
-                        <li class="footer-li">MTNL ROAD, SAKINAKA, ANDHERI-EAST</li>
-                        <li class="footer-li"><span><i class="fas fa-phone fa-lg footer-icon pr-1"></i>9820467586</span></li>
-                        <li class="footer-li"><span><i class="fas fa-envelope fa-lg footer-icon pr-1"></i></span> info@sagittaria.in</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <h5 class="footer-h5">Stay Updated</h5>
-                <p>Join our email list to get the latest updates and information.</p>
-                <form action="">
-                    <input id="footer-email" class="mb-3" type="email" placeholder="your email address">
-                    <button type="submit" class="btn btn-success py-2 mb-1">Sign Up</button>     
-                </form>
-            </div>
-        </div>
-        <hr class="footer-horizontal-line"> 
-        <p style="color: #849e42; margin-bottom: -2em" class="text-center">Copyright &copy; 2020 </p>
-    </div>
+        <?php 
+            include_once('includes/footer.php');
+       ?>
     <!--End of Footer Section-->
 
 </body>
-<!--JQuery-->
-<script src="vendors/js/jquery.min.js"></script>
+<script>
+    var myIndex = 0;
+    carousel();
 
-<!--FONT AWESOME-->
-<script src="vendors/css/fontawesome/js/all.js"></script>
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 2500);
+    }
+</script>
 
-<!--BOOTSTRAP-->
-<script src="vendors/js/bootstrap/bootstrap.min.js"></script>
 </html>

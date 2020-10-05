@@ -61,7 +61,7 @@
                                     <div class="col-md-3 mb-5 <?php echo $category_name ?>">
                                         <div class="portfolio-item">
                                             <a href="admin/images/<?php echo $product_image; ?>" title="<?php echo $product_name; ?>">
-                                                <img src="admin/images/<?php echo $product_image; ?>" alt=""  style="box "class="img-responsive product-img" width="245px" height="240px">
+                                                <img src="admin/images/<?php echo $product_image; ?>" alt="" class="img-responsive product-img" width="245px" height="240px">
                                             </a>
                                         </div>
                                     </div> 

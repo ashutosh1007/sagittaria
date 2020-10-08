@@ -7,8 +7,7 @@
         </div>
 
        <div class="form-group">
-            <input type="file" id="certification_image" name="certification_image"
-            class="form-control"> 
+            <input type="file" id="certification_image" name="certification_image" class="form-control "> 
         </div>
         
         <div class="form-group">                       

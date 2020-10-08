@@ -31,13 +31,14 @@
                                 <div class="filters" id="filters">
                                 <?php
                                     while($row = mysqli_fetch_assoc($select_all_categories_query)) {
-                                            $id = $row['id'];
-                                            $category_name = $row['category_name'];       
-                                ?>
-                                    <button class="btn" data-filter=".<?php echo $category_name ?>" style="color: #1d3557"><span><?php echo $category_name ?></span></button>    
-                                    <?php
+                                        $id = $row['id'];
+                                        $category_name = $row['category_name'];
+                                        if($row > 0 ){
+                                            ?>
+                                            <button class="btn" data-filter=".<?php echo $id; ?>" style="color: #1d3557"><span><?php echo $category_name ?></span></button>
+                                        <?php 
+                                        } else { }
                                     }
-                                    
                                 ?>
                                 </div>
                             </div>
@@ -53,15 +54,17 @@
                                while($row = mysqli_fetch_assoc($select_all_products_query)){
                                
                                     $product_id = $row['product_id'];
+                                    $id = $row['category_id'];
                                     $category_name = $row['category_name'];
                                     $product_name = $row['product_name'];
                                     $product_image = $row['product_image'];
                                     $product_description = $row['product_description'];
                                     ?>
-                                    <div class="col-md-3 mb-5 <?php echo $category_name ?>">
+                                    
+                                    <div class="col-md-3 mb-5 <?php echo $id; ?>">
                                         <div class="portfolio-item">
-                                            <a href="admin/images/<?php echo $product_image; ?>" title="<?php echo $product_name; ?>">
-                                                <img src="admin/images/<?php echo $product_image; ?>" alt="" class="img-responsive product-img" width="245px" height="240px">
+                                            <a href="admin/images/products/<?php echo $product_image; ?>" title="<?php echo $product_name; ?>">
+                                                <img src="admin/images/products/<?php echo $product_image; ?>" alt="" class="img-responsive product-img" width="245px" height="240px">
                                             </a>
                                         </div>
                                     </div> 

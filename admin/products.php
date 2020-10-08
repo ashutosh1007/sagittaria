@@ -2,10 +2,13 @@
 <html lang="en">
 
 <?php
+    $source = "Product";
     include_once("includes/header.php");
+   
 ?>
 
 <?php
+    
     $email = checkUser();
     $user_role = $_SESSION["user_role"];
     if($user_role == "admin"){

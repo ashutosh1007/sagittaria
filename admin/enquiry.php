@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php
+    $source = "Enquiry";
     include_once("includes/header.php");
 ?>
 <?php

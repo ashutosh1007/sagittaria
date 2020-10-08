@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
+    $source = "Category";
     include_once("includes/header.php");
 ?>
 <?php

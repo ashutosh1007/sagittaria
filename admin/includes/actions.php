@@ -3,7 +3,8 @@
     include_once("functions.php");
 
     $result = "success";
-    $uploads_dir = '../images/';
+    $uploads_dir_products = '../images/products/';
+    $uploads_dir_certifications = '../images/certifications/';
 
      
 
@@ -42,7 +43,7 @@ if(isset($_POST['action'])){
         if($row>0){
                 echo "warning";
         }else{
-            move_uploaded_file($product_image_temp, $uploads_dir.$product_image);
+            move_uploaded_file($product_image_temp, $uploads_dir_products.$product_image);
             $query = "INSERT INTO products(category_id, product_name, product_image, product_description, created_at, updated_at, deleted_at) VALUES ('$product_category_id','$product_name', '$product_image', '$product_description', now(), 0, 0)";
             $create_product_query = mysqli_query($connection, $query);       
             confirmQuery($create_product_query);
@@ -52,12 +53,13 @@ if(isset($_POST['action'])){
     } 
     
     elseif( $action == "create_certification" ){
-
+        
+        $colon = "; ";
         $certificate_name = $_POST['certification_name'];
         $certificate_image = $_FILES['file']['name'];
         $certificate_image_temp = $_FILES['file']['tmp_name'];
 
-        move_uploaded_file($certificate_image_temp, $uploads_dir.$certificate_image);
+        move_uploaded_file($certificate_image_temp, $uploads_dir_certifications.$certificate_image);
 
         $query = "SELECT * FROM certifications where certificate_name='$certificate_name'";  
         $select_all_certifications_query = mysqli_query($connection, $query);
@@ -66,7 +68,7 @@ if(isset($_POST['action'])){
         if($row>0){
                 echo "warning";
         }else{
-            $query = "INSERT INTO certifications(certificate_name, certificate_image, created_at, updated_at, deleted_at) VALUES ('$certificate_name', '$certificate_image', now(), 0, 0)";
+            $query = "INSERT INTO certifications(certificate_name, certificate_image, created_at, updated_at, deleted_at) VALUES ('$certificate_name$colon', '$certificate_image', now(), 0, 0)";
 
             $create_certification_query = mysqli_query($connection, $query);
             confirmQuery($create_certification_query);
@@ -126,7 +128,7 @@ if(isset($_POST['action'])){
                 $product_image = $_FILES['file']['name'];
                 $product_image_temp = $_FILES['file']['tmp_name'];
 
-                move_uploaded_file($product_image_temp, $uploads_dir.$product_image);
+                move_uploaded_file($product_image_temp, $uploads_dir_products.$product_image);
                 
             }
             else{
@@ -162,7 +164,7 @@ if(isset($_POST['action'])){
             $certificate_image = $_FILES['file']['name'];
             $certificate_image_temp = $_FILES['file']['tmp_name'];  
             
-            move_uploaded_file($certificate_image_temp, $uploads_dir.$certificate_image);
+            move_uploaded_file($certificate_image_temp, $uploads_dir_certifications.$certificate_image);
         }
         else {
             $query = "SELECT * FROM certifications WHERE id = $cert_id";

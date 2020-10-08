@@ -25,7 +25,7 @@ $(document).ready(function () {
             }
         }
         , messages: {
-            category_name: "Please fill Category"
+            category_name: "Please Fill Category"
         }
         , submitHandler: function (form) {
             data = {
@@ -63,12 +63,13 @@ $(document).ready(function () {
                 required: true
             }
             , certification_image: {
-                required: true
+                required: true, 
+                extension: "PNG|JPEG|JPG"
             }
         }
         , messages: {
-            certification_name: "Please fill Certification"
-            , certification_image: "Please select Image"
+            certification_name: "Please Fill Certification"
+            , certification_image: "Please Select Image with Proper Extension"
         , }
         , submitHandler: function (form) {
             var fd = new FormData()
@@ -88,6 +89,8 @@ $(document).ready(function () {
                 , success: function (res) {
                     result = res.trim();
                     if (result == 'success') {
+                        $('#certification_name').val('');
+                        $('#certification_image').val('');
                         toastr.success("New Certification Added");
                     }
                     else if (result == 'warning') {
@@ -103,6 +106,7 @@ $(document).ready(function () {
             });
         }
     });
+    
 
     //Create Product
     $("#product_form").validate({
@@ -111,16 +115,17 @@ $(document).ready(function () {
                 required: true
             }
             , product_image: {
-                required: true
+                required: true,
+                extension: "PNG|JPEG|JPG" 
             }
             , product_description: {
                 required: true
             }
         }
         , messages: {
-            product_name: "Please fill product name"
-            , product_image: "Please select Image"
-            , product_description: "Please write some description"
+            product_name: "Please Fill Product Name"
+            , product_image: "Please Select Image with Proper Extension"
+            , product_description: "Please write some Description"
         , }
         , submitHandler: function (form) {
             var fd = new FormData()
@@ -192,11 +197,11 @@ $(document).ready(function () {
             }
         }
         , messages: {
-            first_name: "Please insert first name"
-            , last_name: "Please insert last name"
-            , email: "Please type your email"
-            , password: "Please type your password"
-            , confirm_password: "Re-type your password"
+            first_name: "Please Insert First Name"
+            , last_name: "Please Insert Last Name"
+            , email: "Please Type your Email"
+            , password: "Please type your Password"
+            , confirm_password: "Re-type your Password"
         , }
         , submitHandler: function (form) {
             data = {

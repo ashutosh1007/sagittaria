@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php    
+    $source = "Dashboard";
     include_once("includes/header.php");
 ?>
 <body id="page-top">
@@ -71,6 +72,13 @@
     <h1>Your are not allowed to view this part</h1>  
      <a href="logout.php">back</a>  
     <?php
-    }
+    } 
     ?>
+    <script>
+    $(document).ready(function() {
+        $('#accordionSidebar a').click(function(){
+            $(this).closest('.nav-item').addClass('active').siblings().removeClass('active');                                
+        });
+    });
+    </script>
 </html>

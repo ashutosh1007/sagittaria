@@ -4,8 +4,8 @@
             <h5 class="footer-h5">Contact Us</h5>
             <div>
                 <ul>
-                    <li class="footer-li"><span><i class="fas fa-map-marker-alt fa-lg footer-icon pr-1"></i></span>307, CRESCENT BUSINESS PARK,</li>
-                    <li class="footer-li">MTNL ROAD, SAKINAKA, ANDHERI-EAST</li>
+                    <li class="footer-li"><span><i class="fas fa-map-marker-alt fa-lg footer-icon pr-1"></i></span>307, Crescent Business Park,<br>MTNL Road, Sakinaka, Andheri-East</li>
+                    <li class="footer-li"></li>
                     <li class="footer-li"><span><i class="fas fa-phone fa-lg footer-icon pr-1"></i>9820467586</span></li>
                     <li class="footer-li"><span><i class="fas fa-envelope fa-lg footer-icon pr-1"></i></span> info@sagittaria.in</li>
                 </ul>
@@ -13,10 +13,10 @@
         </div>
         <div class="col-md-7">
             <h5 class="footer-h5">Stay Updated</h5>
-            <p>Join our email list to get the latest updates and information.</p>
+            <p style="font-size: 1em;">Join our email list to get the latest updates and information.</p>
             <form action="">
                 <input id="footer-email" class="mb-3" type="email" placeholder="your email address">
-                <button type="submit" class="btn btn-success py-2 mb-1">Sign Up</button>
+                <button type="submit" class="btn btn-success py-2 mb-1 footer-btn-submit">Sign Up</button>
             </form>
         </div>
     </div>

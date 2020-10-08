@@ -1,6 +1,8 @@
-<?php
+<?php 
+    $source = "view_product";
     $query = "SELECT * FROM products, categories where products.category_id = categories.id";
     $select_all_products_query = mysqli_query($connection, $query);  
+        
 ?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">

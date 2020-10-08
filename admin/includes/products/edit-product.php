@@ -1,4 +1,5 @@
 <?php 
+    $source = "edit_product";
     $uploads_dir = 'images/';
     
     $query = "SELECT * FROM  categories";

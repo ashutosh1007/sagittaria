@@ -6,7 +6,7 @@
                 <ul>
                     <li class="footer-li"><span><i class="fas fa-map-marker-alt fa-lg footer-icon pr-1"></i></span>307, Crescent Business Park,<br>MTNL Road, Sakinaka, Andheri-East</li>
                     <li class="footer-li"></li>
-                    <li class="footer-li"><span><i class="fas fa-phone fa-lg footer-icon pr-1"></i>9820467586</span></li>
+                    <li class="footer-li"><span><i class="fas fa-phone fa-lg footer-icon pr-1"></i>+91 9820 467 586</span></li>
                     <li class="footer-li"><span><i class="fas fa-envelope fa-lg footer-icon pr-1"></i></span> info@sagittaria.in</li>
                 </ul>
             </div>
@@ -43,18 +43,29 @@
 <!-- Owl Carousel JS -->
 <script src="vendors/js/owl-carousel/owl.carousel.min.js"></script>
 
+<!-- Waypoints -->
+<script src="vendors/js/waypoints/jquery.waypoints.min.js"></script>
+    
 <!-- Isotope -->
 <script src="vendors/js/isotope/isotope.pkgd.min.js"></script>
 
 <!-- Magnific Popup -->
 <script src="vendors/js/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+<!-- Counter -->
+<script src="vendors/js/counter/jquery.counterup.min.js"></script>
+
 <!-- CUSTOM SCRIPTS -->
 <script src="vendors/js/scripts.js"></script>
 
-
 <script>
 $(function(){
+
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1000
+    });
+    
     var width = $(window).width();
     
     $(window).on("load", function() {
@@ -75,7 +86,8 @@ $(function(){
         else{
             $('#nav>li>a span').removeClass('').addClass('vline'); 
         }
-     });
-
+    });
 });
+    
+    
 </script>

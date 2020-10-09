@@ -5,8 +5,6 @@ define("USER", "root");
 define("PASSWORD", "");
 define("DB", "sagittaria");
 
-
-
 global $connection;
 $connection = mysqli_connect(SERVER, USER, PASSWORD, DB);
 
@@ -21,9 +19,7 @@ ob_start(); // yeh code teri jab ini file banegi usmai daal dena ! without fail
     $select_all_users_query = mysqli_query($connection, $query);
     $row = mysqli_fetch_assoc($select_all_users_query);
             
-    if($row>0){
-//      echo "warning";
-    }else{
+    if($row>0){ } else{
         $password = 'admin';
 
         $options = [

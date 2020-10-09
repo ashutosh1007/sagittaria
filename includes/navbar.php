@@ -1,4 +1,4 @@
-<div style="background-color: #f1f3f8; font-weight: 100 !important; margin-bottom: -1em">
+<div id="navbar-contact-us">
    <ul class="nav navbar-nav mr-3 mb-1">
         <li class="nav-link ml-auto"> 
             <i class="fa fa-envelope" aria-hidden="true"></i> info@sagittaria.in 
@@ -9,7 +9,7 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light">
-    <a style="margin-bottom:-0.5em" class="navbar-brand" href="index.php"><img src="vendors/images/Final-green-logo.jpg" alt="" width="75px" height="75px"></a>
+    <a style="margin-bottom:-0.5em" class="navbar-brand" href="index.php"><img src="vendors/images/Final-green-logo.jpg" alt="" width="90px" height="80px"></a>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul id="nav" class="nav navbar-nav ml-auto mr-3 mt-2">
@@ -21,3 +21,4 @@
         </ul>
     </div>
 </nav>
+

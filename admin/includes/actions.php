@@ -54,7 +54,7 @@ if(isset($_POST['action'])){
     
     elseif( $action == "create_certification" ){
         
-        $colon = "; ";
+        $colon = ", ";
         $certificate_name = $_POST['certification_name'];
         $certificate_image = $_FILES['file']['name'];
         $certificate_image_temp = $_FILES['file']['tmp_name'];

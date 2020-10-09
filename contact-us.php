@@ -95,7 +95,7 @@
                                       Give us a call
                                     </h4> 
                                   <hr class="contact-horizontal-line">
-                                  <p class="text-center">+91 33 2290 1540 / 1543</p>
+                                  <p class="text-center">+91 9820 467 586</p>
                               </div>
                             </div>
                             <div class="col-md-4 contact-styles">
@@ -104,7 +104,7 @@
                                       Send an email
                                     </h4> 
                                   <hr class="contact-horizontal-line">
-                                  <p class="text-center">info@ecojuteindi.com</p>        
+                                  <p class="text-center">info@sagittaria.in</p>        
                               </div>
                             </div>
                             <div class="col-md-4 contact-styles">
@@ -114,9 +114,7 @@
                                       Address
                                     </h4>
                                     <hr class="contact-horizontal-line"> 
-                                    <p class="text-center">6 Little Russel Street,
-                                        Kankaria Estate, 6th Floor,
-                                        Kolkata, West Bengal 700071</p>
+                                    <p class="text-center">307, Crescent Business Park, MTNL Road, Sakinaka, Andheri-East</p>
                               </div>
                             </div>
                         </div>

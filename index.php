@@ -49,46 +49,16 @@
         <!--End of Designs Section-->
         
         <!--Certifications Section-->
-        <?php
-            $certificate_info = "";
-            $query = "SELECT * FROM certifications";
-            $select_certification_query = mysqli_query($connection, $query);
-            confirmQuery($select_certification_query);
-        ?>
-            <section id="certifications" class="pb-5" style="background-color: #F6FAEC;">
-                <div class="container">
-                    <h1 class="text-center">Certifications</h1>
-                    <hr class="horizontal-line">
-
-                    <?php
-                        $count=0;
-                        while($row = mysqli_fetch_assoc($select_certification_query)){
-                            $certificate_info .= $row['certificate_name'];
-                            $certificates[] = $row;
-                            $count++;
-                        }
-                       if($count > 0){
-                       ?>
-                        <p class="p-styles">
-                            <?php echo $certificate_info; ?>
-                        </p>
-                        <?php
-                        foreach ($certificates as $certificate){
-                        ?> 
-                        <img src="admin/images/certifications/<?php echo $certificate['certificate_image']; ?>" class="mx-2 my-2" alt="" width="150px" height="100px">
-                        <?php 
-                        }
-                       }
-                    ?>
-                </div>
-            </section>
-            <!--End of Certifications Section-->
-            
-            <!--Footer Section-->
             <?php 
-                include_once('includes/footer.php');
+                include_once('includes/certification.php');
             ?>
-            <!--End of Footer Section-->
+        <!--End of Certifications Section-->
+            
+        <!--Footer Section-->
+        <?php 
+            include_once('includes/footer.php');
+        ?>
+        <!--End of Footer Section-->
     </body>
     <script>
         var myIndex = 0;

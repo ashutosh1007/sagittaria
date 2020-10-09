@@ -66,16 +66,15 @@ p{
 }
 
 .parallax {
-    background: url("../images/background-5.jpg") no-repeat fixed center;    
+    background: url("../images/background-10.jpg") fixed center;    
     background-size: cover;
     padding-bottom: 2em;
 }
 
 .parallax-2 {
-    background: url("../images/background-6.jpg") no-repeat fixed center;    
-    background-size: cover;
-    padding-bottom: 2em;
-    opacity: 0.9;'
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 45%, rgba(227,227,220,1) 92%, rgba(227,227,220,1) 100%) fixed;
+    padding-bottom: 2em;    
 }
 
 .caption{
@@ -93,6 +92,13 @@ p{
     margin-top: 7em;
     padding-left: 15em;
 
+}
+
+#navbar-contact-us{
+    background: rgb(251,251,251);
+    background: radial-gradient(circle, rgba(251,251,251,1) 0%, rgba(227,227,220,1) 38%, rgba(255,255,255,1) 99%);
+    font-weight: 100 !important; 
+    margin-bottom: -1em;
 }
 
 .product-image{
@@ -154,6 +160,12 @@ p{
 /**********************************************
             ABOUT US - EXPERIENCE
 **********************************************/
+.parallax-3 {
+    background: url("../images/background-11.jpg") fixed center;    
+    background-size: cover;
+    padding-bottom: 2em;
+}
+
 .experiences-card{
 /*    background-color:;*/
     background-color: #1d3557;
@@ -285,7 +297,7 @@ textarea{
     width: 75%; 
     margin: auto;
     text-align: center;
-    font-weight: bold;
+/*    font-weight: bold;*/
     color: #1d3557; 
 }
 
@@ -303,6 +315,7 @@ textarea{
     display: none;
 }
 
+.cert-p{}
 
 .product-img{
     background-color: white; 
@@ -345,6 +358,13 @@ textarea{
     
     .footer-horizontal-line{ 
         margin-right: 0.1em;
+    }
+    
+    .cert-p{
+        margin-top: 2em;
+        margin-left: 5em;
+        width: 100px;
+        height: 75px;
     }
 
 }

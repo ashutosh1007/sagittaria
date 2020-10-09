@@ -1,16 +1,6 @@
 <?php
     include_once("includes/db.php");
     include_once("admin/includes/functions.php");
-
-    $certificate_info = "";
-    $query = "SELECT * FROM certifications";
-    $select_certification_query = mysqli_query($connection, $query);
-    confirmQuery($select_certification_query);
-
-    while($row = mysqli_fetch_assoc($select_certification_query)){
-        $certificate_info .= $row['certificate_name'];
-        $certificates[] = $row;
-    }
 ?>
 
 <html>
@@ -37,74 +27,36 @@
     <!--End of About us section-->
     
     <!--Experiences section-->    
-    <section id="experiences" style="width: 75%; margin: auto">
-        <div class="row">
+    <section id="experiences" class="parallax-3" style="height: 15em;">
+        <div class="row ml-5">
             <div class="col-md-3 experiences-pm experiences-card">
-               <h2 class="text-center experiences-h2">
-                   75+
-               </h2>
+               <h2 class="counter text-center experiences-h2 ">75</h2>
                 <p class="experiences-p-style" style="color: white">years experience</p>
             </div>
             <div class="col-md-3 experiences-pm experiences-card">
-               <h2 class="text-center experiences-h2">
-                   500+
-               </h2>
+               <h2 class="counter text-center experiences-h2">500</h2>
                 <p class="experiences-p-style" style="color: white">workers</p>
             </div>
             <div class="col-md-3 experiences-pm experiences-card">
-               <h2 class="text-center experiences-h2">
-                   9 mn
-               </h2>
+                <h2 class="counter text-center experiences-h2">9000000</h2>
                 <p class="experiences-p-style" style="color: white">bags annually</p>
             </div>
-        </div>
+            </div>
     </section>
     <!--End of Experiences section-->
 
-   <!--Certifications Section-->  
-    <?php
-       if($row == 0){
-           
-       }else{
-    ?>
-  
-    <section id="certifications" class="mb-4">
-        <div class="container">
-            <h1 class="text-center">
-                Certifications
-            </h1>
-            <hr class="horizontal-line">
-              <p class="p-styles"> 
-              
-              <?php echo $certificate_info; ?>
-            </p>
-            <?php
-                foreach ($certificates as $certificate){
-            ?>
-                <img src="admin/images/<?php echo $certificate['certificate_image']; ?>" class="mx-2 my-2" alt="" width="150px" height="100px">
-            <?php 
-                }
-       }
-            ?>
-        </div>
-    </section>
+    <!--Certifications Section-->
+        <?php 
+            include_once('includes/certification.php');
+        ?>
     <!--End of Certifications Section-->
 
 
-     <!--Footer Section-->
+    <!--Footer Section-->
         <?php 
             include_once('includes/footer.php');
        ?>
     <!--End of Footer Section-->
-
 </body>
-<!--JQuery-->
-<script src="vendors/js/jquery.min.js"></script>
-
-<!--FONT AWESOME-->
-<script src="vendors/css/fontawesome/js/all.js"></script>
-
-<!--BOOTSTRAP-->
-<script src="vendors/js/bootstrap/bootstrap.min.js"></script>
 
 </html>

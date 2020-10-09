@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 01, 2020 at 08:04 AM
+-- Generation Time: Oct 09, 2020 at 06:49 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -51,6 +51,17 @@ CREATE TABLE `certifications` (
   `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `certifications`
+--
+
+INSERT INTO `certifications` (`id`, `certificate_name`, `certificate_image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'sedex, ', 'certificate-3.png', '2020-10-09 15:29:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'isoo:200, ', 'certificate-1.png', '2020-10-09 15:30:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'ISO14001:2015 , ', 'certificate-2.png', '2020-10-09 15:30:43', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'ISO5 2001:2020 , ', 'certificate-5.png', '2020-10-09 15:31:05', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'Smeta, ', 'certificate-4.png', '2020-10-09 15:31:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -71,6 +82,13 @@ CREATE TABLE `enquiries` (
   `created_at` int(11) NOT NULL,
   `deleted_at` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enquiries`
+--
+
+INSERT INTO `enquiries` (`id`, `name`, `company_name`, `address`, `country`, `city`, `pin_code`, `contact_number`, `email`, `enquiry`, `created_at`, `deleted_at`) VALUES
+(1, 'ghjn', 'ghjk', 'hjk', 'j', 'j', 54254, 2147483647, 'ashutosh.tambe@somaiya.edu', 'xdcfghbjnkm', 2147483647, 0);
 
 -- --------------------------------------------------------
 
@@ -106,6 +124,13 @@ CREATE TABLE `users` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `user_role`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'admin', 'admin', 'admin', '$2y$12$ULpocnFcSN1Lzcyufe23re/ktgFMLw/64Ki9NsKnMdcN491onzB2q', 'admin', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -155,13 +180,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `certifications`
 --
 ALTER TABLE `certifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `enquiries`
 --
 ALTER TABLE `enquiries`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -173,7 +198,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

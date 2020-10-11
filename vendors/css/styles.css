@@ -108,6 +108,7 @@ p{
     margin: auto;  
 }
 
+
 /**********************************************
                     FOOTER
 **********************************************/
@@ -362,7 +363,6 @@ textarea{
     
     .cert-p{
         margin-top: 2em;
-        margin-left: 5em;
         width: 100px;
         height: 75px;
     }

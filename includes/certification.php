@@ -23,7 +23,7 @@
                 consistent Quality &amp; Business Standards. We are also SA 8000:2014 and SMETA 4 Pillar audited &amp; certified for Social and
                 Ethical Compliance, <?php echo $certificate_info; ?>
             </p>
-            <div class="mt-5">
+            <div class="mt-5 mx-auto px-2">
                 <?php
                     foreach ($certificates as $certificate){
                 ?> 

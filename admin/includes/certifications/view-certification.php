@@ -41,7 +41,7 @@
                             echo "<tr>";
                             echo "<td>$id</td>";
                             echo "<td>$certificate_name</td>";
-                            echo "<td><img src = 'images/$certificate_image' alt = 'Product Image' height = '120px'></td>";
+                            echo "<td><img src = 'images/certifications/$certificate_image' alt = 'Product Image' height = '120px'></td>";
                            
                             echo "<td><a href='certifications.php?source=edit_certification&p_id=$cert_id' class='btn btn-primary'><span class='fa fa-pen'></span> Edit</a></td> ";
                             

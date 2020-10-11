@@ -18,7 +18,7 @@
                         <div class="row caption">RECYLE</div>
                         <div class="row caption">REUSE</div>
                     </div>
-                    <div class="col-md-8" id="image"> <img class="mySlides animated fadeIn" src="vendors/images/hand-bag-1.png" height="400px"> <img class="mySlides animated fadeIn" src="vendors/images/hand-bag-2.png" height="400px"> <img class="mySlides animated fadeIn" src="vendors/images/hand-bag-3.png" height="400px"> </div>
+                    <div class="col-md-8" id="image"> <img class="mySlides animated fadeIn" src="vendors/images/hand-bag-1.png" height="400px"> <img class="mySlides animated fadeIn" src="vendors/images/hand-bag-4.png" height="400px"> <img class="mySlides animated fadeIn" src="vendors/images/hand-bag-3.png" height="400px"> </div>
                 </div>
             </div>
         </div>

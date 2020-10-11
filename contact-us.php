@@ -40,7 +40,7 @@
         <div class="container">
             <section>
                 <h1 class="text-center heading-color-white">CONTACT US</h1>
-                <p class="text-center" style="color: #1d3557; font-weight: bold;">We are one of the Leading Indian Manufacturers and Exporters of eco friendly
+                <p class="text-center" style="color: #1d3557;">We are one of the Leading Indian Manufacturers and Exporters of eco friendly
                 <br>Jute Bags and are further willing to expand our business globally.</p>
                 <div class="row" id="contact-form">
                     <div class="col-md-12">

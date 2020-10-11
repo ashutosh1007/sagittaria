@@ -47,7 +47,7 @@
                             echo "<td>$id</td>";
                             echo "<td>$category_name</td>";
                             echo "<td>$product_name</td>";
-                            echo "<td><img src = 'images/$product_image' alt = 'Product Image' height = '120px' width='200px'></td>";
+                            echo "<td><img src = 'images/products/$product_image' alt = 'Product Image' height = '120px' width='200px'></td>";
                             echo "<td class='td'>$product_description</td>";
                             
                            echo "<td><a href='products.php?source=edit_product&p_id=$product_id' class='btn btn-primary'><span class='fa fa-pen'></span> Edit</a></td> ";

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="vendor/dropzone-5.7.0/dist/dropzone.css">    
     
     <link rel="stylesheet" href="css/styles.css">
+    
     <style>
          .td {
             max-width: 150px;
@@ -39,4 +40,5 @@
             width: 100%;
         }
     </style>
+    
 </head>

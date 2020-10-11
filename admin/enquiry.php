@@ -10,6 +10,7 @@
     $user_role = $_SESSION["user_role"];
     if($user_role == "admin"){
 ?>
+
 <body id="page-top">
 
   <!-- Page Wrapper -->

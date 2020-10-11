@@ -63,7 +63,7 @@
                 if($certificate_image == "") 
                     echo "<h4>No Image Set</h4";
                 else
-                    echo "<img src = 'images/$certificate_image' alt = 'Certificate Image' height = '120px'> ";
+                    echo "<img src = 'images/certifications/$certificate_image' alt = 'Certificate Image' height = '120px'> ";
             ?>
             
         </div>

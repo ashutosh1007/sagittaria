@@ -19,9 +19,7 @@
            if($count > 0){
            ?>
             <p class="p-styles">
-                The Government of India has recognized us as One Star Export House which speaks about our commitment towards
-                consistent Quality &amp; Business Standards. We are also SA 8000:2014 and SMETA 4 Pillar audited &amp; certified for Social and
-                Ethical Compliance, <?php echo $certificate_info; ?>
+               <?php echo $certificate_info; ?>
             </p>
             <div class="mt-5 mx-auto px-2">
                 <?php

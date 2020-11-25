@@ -5,7 +5,9 @@
 
 <html>
 
-<?php include_once('includes/header.php'); ?>
+<?php 
+    $title = "About Us";
+    include_once('includes/header.php'); ?>
 
 <body>
    
@@ -16,35 +18,27 @@
         
     <!--About us section-->
     <div class="parallax">
-        <h1 class="text-center">ABOUT US</h1>
+        <h1 class="text-center">About us</h1>
+        <hr class="horizontal-line">
+        <p class="p-styles pb-4">Sagittaria Exports Pvt. Ltd. is a prominent manufacturer and exporter since 2018 and is a fast-growing certified company in India. We specialize in manufacturing and exporting of
+            wide range of canvas bags, jute bags, aprons and textile made ups for various domestic and
+            business requirements. We at Sagittaria Exports Pvt Ltd. think it is vital to make ecologically
+            positive decision today for the environment, health of our families and for generations to
+            come.</p>
+
+        <p class="p-styles pb-4">The company is a dream work of <span id="director">Mr. Ryan Merchant (Director)</span> who is innovatively and
+            environmentally inclined to work with people who can turn concepts and designs into
+            reality. Sagittaria Exports Pvt. Ltd. is a subsidiary of CSI (Carlo Sacchettini Import), a France
+            based company.</p>
+
+        <p class="p-styles pb-4">Our complete range of products are manufactured from high grade raw material, 100%
+            Organic and Fairtrade cotton.</p>
         
-        <p class="p-styles mb-4">We are in the Jute business since the last 75 years, which included manufacturing of commercial jute bags used for various purposes for the domestic market. In order to diversify the business, we entered into manufacturing of all kinds of Eco-friendly Jute &amp; Cotton Bags and to globalize the new product range, Eco Jute Pvt. Ltd. was established in 1998.</p>
-
-        <p class="p-styles mb-4">We are in the Jute business since the last 75 years, which included manufacturing of commercial jute bags used for various purposes for the domestic market. In order to diversify the business, we entered into manufacturing of all kinds of Eco-friendly Jute &amp; Cotton Bags and to globalize the new product range, Eco Jute Pvt. Ltd. was established in 1998.</p>
-
-        <p class="p-styles mb-4">We are in the Jute business since the last 75 years, which included manufacturing of commercial jute bags used for various purposes for the domestic market. In order to diversify the business, we entered into manufacturing of all kinds of Eco-friendly Jute &amp; Cotton Bags and to globalize the new product range, Eco Jute Pvt. Ltd. was established in 1998.</p>
+        <p class="p-styles pb-4">We are proud to offer these ecologically responsible products that are exclusive in trend and appeal to the end-users.</p>
     </div>
     <!--End of About us section-->
     
-    <!--Experiences section-->    
-    <section id="experiences" class="parallax-3" style="height: 15em;">
-        <div class="row ml-5">
-            <div class="col-md-3 experiences-pm experiences-card">
-               <h2 class="counter text-center experiences-h2 ">75</h2>
-                <p class="experiences-p-style" style="color: white">years experience</p>
-            </div>
-            <div class="col-md-3 experiences-pm experiences-card">
-               <h2 class="counter text-center experiences-h2">500</h2>
-                <p class="experiences-p-style" style="color: white">workers</p>
-            </div>
-            <div class="col-md-3 experiences-pm experiences-card">
-                <h2 class="counter text-center experiences-h2">9000000</h2>
-                <p class="experiences-p-style" style="color: white">bags annually</p>
-            </div>
-            </div>
-    </section>
-    <!--End of Experiences section-->
-
+   
     <!--Certifications Section-->
         <?php 
             include_once('includes/certification.php');
@@ -57,6 +51,6 @@
             include_once('includes/footer.php');
        ?>
     <!--End of Footer Section-->
-</body>
+    </body>
 
 </html>

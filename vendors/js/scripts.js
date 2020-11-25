@@ -1,15 +1,9 @@
-
-$(document).ready(function () {
-    $("#isotope-filters").on("click", "button", function () {
-        let filterValue = $(this).attr("data-filter");
-        $("#isotope").isotope({
-            filter: filterValue
-        });
-        //active button
-        $("#isotope-filters").find('.active').removeClass('active');
-        $(this).addClass('active');
+$(document).ready(function () {   
+   $("li").click(function(){
+       $("li").find('.active').removeClass('active');
+        $(this).addClass('active');    
     });
-
+    
     $("#portfolio-wrapper").magnificPopup({
         delegate: 'a'
         , type: 'image'
@@ -26,10 +20,62 @@ $(document).ready(function () {
         }
     });
     
-     $("#btn-filter").on("click", function() {
-         $("#filters").toggle('slow', 'swing');    
+    //Create Category
+    $("#enquiry_form").validate({
+        rules: {
+                contact_name: {
+                    required: true
+                }
+                , company_name: {
+                    required: true
+                }
+                , your_message: {
+                    required: true
+                }
+                , email: {
+                    required: true,
+                    email: true,
+                }
+        }
         
-     });
+        , messages: {
+                contact_name: "Please Type Your Name"
+                , company_name: "Please Type Your Company Name"
+                , your_message: "Please Type Your Your Message"
+                , email: "Please Type Your Email Address"
+        }
+        
+        , submitHandler: function (form) {
+            var checkedValue = [];
+            $.each($(".category:checked"), function(){
+                checkedValue.push($(this).val());
+            });
+            
+            data = {
+                "contact_name": $('#contact_name').val()
+                , "company_name": $('#company_name').val()
+                , "your_message": $('#your_message').val()
+                , "category" : checkedValue
+                , "email": $('#email').val()
+                , "action": "create_enquiry"
+            }
+            
+            , $.ajax({
+                url: "form.php"
+                , type: "POST"
+                , data: data
+                , success: function (result) {
+                    $('#contact_name').val('');
+                    $('#company_name').val('');
+                    $('#your_message').val('');
+                    $('.category').prop('checked', false);
+                    $('#email').val('');
+                    toastr.success("Enquiry Sent Successfully");
+                }
+                , error: function (result) {
+                    toastr.error("Failed to send enquiry");
+                }
+            });
+        }
+    });
 });
-
-

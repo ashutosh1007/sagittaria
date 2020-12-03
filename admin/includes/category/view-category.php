@@ -14,6 +14,7 @@
                     <tr>
                         <th>Sr No.</th>
                         <th>Category Name</th>
+                        <th>Category Image</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -22,6 +23,7 @@
                     <tr>
                         <th>Sr No.</th>
                         <th>Category Name</th>
+                        <th>Category Image</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -34,11 +36,13 @@
                             $id = $id+1;
                             $category_id = $row['id'];
                             $category_name = $row['category_name'];
+                            $category_image = $row['category_image'];
                             
                             echo "<tr>";
                             
                             echo "<td>$id</td>";
                             echo "<td>$category_name</td>";
+                            echo "<td><img src = 'images/categories/$category_image' alt = 'Category Image' height = '120px'></td>";
                             
                             echo "<td><a href='categories.php?source=edit_category&p_id=$category_id' class='btn btn-primary'><span class='fa fa-pen'></span> Edit</a></td> ";
                             

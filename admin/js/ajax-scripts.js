@@ -23,23 +23,36 @@ $(document).ready(function () {
             category_name: {
                 required: true
             }
+            , category_image: {
+                required: true, 
+                extension: "PNG|JPEG|JPG"
+            }
         }
         , messages: {
             category_name: "Please Fill Category"
+            , category_image: "Please Select Image with Proper Extension"
         }
         , submitHandler: function (form) {
-            data = {
-                "category_name": $('#category_name').val()
-                , "action": "create_category"
-            }
+            var fd = new FormData()
+            var category_name = $('#category_name').val();
+            var files = $('#category_image')[0].files[0];
+            var action = "create_category";
+            
+            fd.append("category_name", category_name);
+            fd.append("file", files);
+            fd.append("action", action);
+            
             $.ajax({
                 url: "includes/actions.php"
                 , type: "POST"
-                , data: data
+                , data: fd
+                , contentType: false
+                , processData: false
                 , success: function (res) {
                     result = res.trim();
                     if (result == 'success') {
                         $('#category_name').val('');
+                        $('#category_image').val('');
                         toastr.success("New Category Added");
                     }
                     else if (result == 'warning') {
@@ -240,24 +253,36 @@ $(document).ready(function () {
                 }
             });
         }
-    });
-
+    });    
+    
     //Edit Category
     $("#edit_category").click(function (e) {
-        data = {
-            "cat_id": $('#category_id').val()
-            , "category_name": $('#category_name').val()
-            , "action": "edit_category"
+        var fd = new FormData()
+        var category_id = $('#category_id').val();
+        var category_name = $('#category_name').val();
+        var files = $('#category_image')[0].files[0];
+        if (files == undefined) {
+            files = "";
         }
+        else {
+            files = $('#category_image')[0].files[0];
+        }
+        var action = "edit_category";
+        fd.append("category_id", category_id)
+        fd.append("category_name", category_name);
+        fd.append("file", files);
+        fd.append("action", action);
         e.preventDefault();
         $.ajax({
             type: "POST"
             , url: "includes/actions.php"
-            , data: data
+            , data: fd
+            , contentType: false
+            , processData: false
             , success: function (res) {
                 result = res.trim();
                 if (result == 'success') {
-                    toastr.success("Category Edited Successfully");
+                    toastr.success("Edited Category Successfully");
                 }
             }
             , error: function (result) {
@@ -265,7 +290,7 @@ $(document).ready(function () {
             }
         });
     });
-
+    
     //Edit Certification
     $("#edit_certification").click(function (e) {
         var fd = new FormData()

@@ -1,5 +1,5 @@
+<?php ob_start(); ?>
 <!DOCTYPE html>
-
 <?php
     include("../includes/db.php");
     include("includes/functions.php");
@@ -40,7 +40,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Admin - Login</title>
+  <title>Sagittaria - Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

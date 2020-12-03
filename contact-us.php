@@ -4,6 +4,7 @@
         include("includes/db.php");
         include("admin/includes/functions.php");
         $title = "Contact Us";
+        $nav = "contact";
         include_once('includes/header.php');
         
         use PHPMailer\PHPMailer\PHPMailer;
@@ -27,12 +28,12 @@
     <!--Parallax Image-->
     <div class="parallax">
         <!--Start of Container-->
-        <div class="container">
-            <section class="pb-5">
-                <h1 class="text-center">Contact Us</h1>
+        <div class="pb-5 ">
+                <h2 class="pl-4">Contact Us</h2>
                 <hr class="horizontal-line">
-                <p class="text-center">If you have any questions or requests for quotes, please do not hesitate to contact us. We are here to answer you</p>
-                <div class="row pb-5" id="contact-form">
+                <p class="pl-4">If you have any questions or requests for quotes, please do not hesitate to contact us. We are here to answer you</p>
+                <div class="container ">
+                   <div class="row pb-5" id="contact-form">
                     <div class="col-md-12">
                         <h4 id="contact-form-h4">For enquiries please contact us at -</h4>
                         <form id="enquiry_form" role="form">
@@ -105,14 +106,14 @@
                                     <h2 class="text-center">
                                      <i class="fas fa-map-marker-alt"></i>
                                     </h2>
-                                    <p class="text-center">307, Crescent Business Park, MTNL Road, Sakinaka, Andheri-East</p>
+                                    <p class="text-center">307, Crescent Business Park, MTNL Road, Sakinaka, Andheri-East, Mumbai - 400072, INDIA</p>
                               </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+            </div>
     </div>
     <!--End of Container-->
     

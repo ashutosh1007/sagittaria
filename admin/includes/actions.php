@@ -5,8 +5,7 @@
     $result = "success";
     $uploads_dir_products = '../images/products/';
     $uploads_dir_certifications = '../images/certifications/';
-
-     
+    $uploads_dir_categories = '../images/categories/';
 
 if(isset($_POST['action'])){
         
@@ -14,19 +13,21 @@ if(isset($_POST['action'])){
         
         if( $action == "create_category" ){
             $category_name = $_POST['category_name'];
-            
+            $category_image = $_FILES['file']['name'];
+            $category_image_temp = $_FILES['file']['tmp_name'];  
             $query = "SELECT * FROM categories where category_name='$category_name'";  
             $select_all_categories_query = mysqli_query($connection, $query);
             $row = mysqli_fetch_assoc($select_all_categories_query);
             
             if($row>0){
                 echo "warning";
-        }else{
-            $query = "INSERT INTO categories(category_name, created_at, updated_at, deleted_at) VALUES ('$category_name', now(), 0, 0)";
-            $create_category_query = mysqli_query($connection, $query);
-            confirmQuery($create_category_query);
-            echo $result;
-        }
+            }else{
+                move_uploaded_file($category_image_temp, $uploads_dir_categories.$category_image);
+                $query = "INSERT INTO categories(category_name, category_image, created_at, updated_at, deleted_at) VALUES ('$category_name', '$category_image', now(), 0, 0)";
+                $create_category_query = mysqli_query($connection, $query);
+                confirmQuery($create_category_query);
+                echo $result;
+            }
     }
     
     elseif($action == "create_product" ){
@@ -106,18 +107,34 @@ if(isset($_POST['action'])){
     }
     
     elseif( $action == "edit_category" ){
-        $category_id = $_POST['cat_id'];
-        $category_name = $_POST['category_name'];
-
+            $category_id = $_POST['category_id'];
+            $category_name = $_POST['category_name'];
+            if(isset($_FILES['file'])){
+                $category_image = $_FILES['file']['name'];
+                $category_image_temp = $_FILES['file']['tmp_name'];  
+            
+                move_uploaded_file($category_image_temp, $uploads_dir_categories.$category_image);
+            }
+            else {
+                $query = "SELECT * FROM categories WHERE id = $category_id";
+                $category_image_query = mysqli_query($connection, $query);
+                confirmQuery($category_image_query);
+            
+                if($row = mysqli_fetch_assoc($category_image_query) ) {
+                $category_image = $row['category_image'];    
+            }
+        }    
+          
         $query = "UPDATE categories SET ";
         $query .= "category_name = '$category_name', ";
-        $query .= "updated_at =  now()";
+        $query .= "category_image = '$category_image', ";
+        $query .= "updated_at =  now() ";
         $query .= "WHERE id = $category_id";
 
         $update_category_query = mysqli_query($connection, $query);
 
         confirmQuery($update_category_query);
-        echo $result;
+        echo "success";
     }
 
     elseif( $action == "edit_product"){

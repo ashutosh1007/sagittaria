@@ -24,8 +24,6 @@
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="vendor/toastr/toastr.min.css">
-
-    <link rel="stylesheet" href="vendor/dropzone-5.7.0/dist/dropzone.css">    
     
     <link rel="stylesheet" href="css/styles.css">
     

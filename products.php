@@ -11,6 +11,7 @@
 <html>
   <?php 
     $title =  "Products";
+    $nav = "products";
     include_once('includes/header.php');
     ?>
 <body>
@@ -21,10 +22,9 @@
      
     <!--PORTFOLIO-->
     <div class="parallax">
-        <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1 class="text-center">Bags</h1>
+                    <h2 class="pl-4">Our Products</h2>
                     <hr class="horizontal-line">
                 </div>
                  <div class="col-md-12" id="bags">  
@@ -35,8 +35,8 @@
                             $category_image = $row['category_image'];
                             if($row > 0 ){
                                 ?>
-                                    <button type="submit" onclick="location.href='view-products.php?cat-id=<?php echo $id; ?>';" class="col-xl-3 col-lg-5 col-md-5 col-sm-6 btn button categories mr-5 mb-5" style="width:100%;"  ><img src="admin/images/categories/<?php echo $category_image ?>" alt="" width="300px" height="250px" style="border: 1px solid black">
-                                         <div>
+                                    <button type="submit" onclick="location.href='view-products.php?cat-id=<?php echo $id; ?>';" class="col-xl-3 col-lg-5 col-md-5 col-sm-6 btn button categories mr-5 mb-5" style="width:100%;"  ><img src="admin/images/categories/<?php echo $category_image ?>" alt="" width="100%" height="100%" style="border: 1px solid black">
+                                         <div class="py-2 mt-2" style="background-color: #085f48; border: 1px solid black; color: white; width: 100%">
                                              <?php echo $category_name ?>
                                          </div>
                                     </button> 
@@ -46,8 +46,12 @@
                     ?>
                 </div>
             </div>
+            <!--Certifications Section-->
+            <?php 
+                include_once('includes/certification.php');
+            ?>
+            <!--End of Certifications Section-->
         </div>
-    </div>
     <!--End
      
     <!--Footer Section-->

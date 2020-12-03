@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2020 at 08:58 PM
+-- Generation Time: Dec 03, 2020 at 07:39 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.1
 
@@ -42,11 +42,11 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category_name`, `category_image`, `created_at`, `deleted_at`, `updated_at`) VALUES
-(1, 'ISO Bag', 'TEREE ADELICE ISO BAG.jpg', '2020-11-19 12:02:15', '0000-00-00 00:00:00', '2020-11-11 11:02:46'),
-(2, 'Shopping Bag', 'leclerc bag.jpg', '2020-11-19 12:02:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(3, 'Toiletry and Cosmetic pouches', 'PULCO ISO BAG (2).jpg', '2020-11-19 12:03:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(4, 'Tote Bag', 'BEAUTE TOTE BAG.jpg', '2020-11-19 09:29:07', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(5, 'Vegetable and Fruit Bag', 'INQ - 20-18 - POUCH 3.png', '2020-11-19 12:03:16', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 'Cosmetic Pouch', 'Cosmetic pouch cover pic.jpg', '2020-12-01 09:50:26', '0000-00-00 00:00:00', '2020-12-01 09:50:26'),
+(2, 'ISO Bag', 'ISO bag  cover pic.jpg', '2020-12-01 10:05:01', '0000-00-00 00:00:00', '2020-12-01 10:05:01'),
+(3, 'Shopping Bag', 'image001.jpg', '2020-12-01 10:25:28', '0000-00-00 00:00:00', '2020-12-01 10:25:28'),
+(4, 'Tote Bag', 'tote bag  (1).jpg', '2020-12-01 08:26:57', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'Vegetable and Fruit Bag', 'veg and fruit cover pic.jpg', '2020-12-01 08:27:18', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -62,6 +62,16 @@ CREATE TABLE `certifications` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `deleted_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `certifications`
+--
+
+INSERT INTO `certifications` (`id`, `certificate_name`, `certificate_image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Fair Trade, ', 'FairTrade-275x300.jpg', '2020-12-01 09:44:56', '2020-12-01 09:44:56', '0000-00-00 00:00:00'),
+(2, 'ICS, ', 'ics logo.png', '2020-11-26 12:01:12', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'SA, ', 'SA 8000.png', '2020-11-26 12:01:24', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'GOTS, ', 'gots logo.png', '2020-11-26 12:01:44', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -106,28 +116,22 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `category_id`, `product_name`, `product_image`, `product_description`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(38, 1, 'Bio Coop ISO Bag', 'bio coop iso bag.jpg', 'Bio Coop ISO Bag', '2020-11-12 06:12:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(39, 1, 'INQ - 22-18-ISO Bag', 'INQ - 22-18 - ISO BAG.jpg', 'INQ - 22-18-ISO Bag', '2020-11-12 06:13:29', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(40, 1, 'PULCO ISO Bag', 'PULCO ISO BAG (1).jpg', 'PULCO ISO Bag', '2020-11-12 06:14:02', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(41, 1, 'PULCO ISO Bag-2', 'PULCO ISO BAG (2).jpg', 'PULCO ISO Bag-2', '2020-11-12 06:14:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(42, 1, 'PULCO ISO Bag-3', 'PULCO ISO BAG (3).jpg', 'PULCO ISO Bag-3', '2020-11-12 06:14:43', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(43, 1, 'SFN LONG ISO Bag 1', 'SFN LONG ISO BAG 1 (2).jpg', 'SFN LONG ISO Bag 1', '2020-11-12 06:15:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(44, 1, 'SFN LONG ISO Bag 1-2', 'SFN LONG ISO BAG 1 (3).jpg', 'SFN LONG ISO Bag 1-2', '2020-11-12 06:15:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(45, 1, 'TEREE ADELICE ISO Bag', 'TEREE ADELICE ISO BAG.jpg', 'TEREE ADELICE ISO Bag', '2020-11-12 06:16:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(46, 2, 'INQ - 22-18 Shopping Bag', 'INQ - 22-18 - SHOPPING BAG.jpg', 'INQ - 22-18 Shopping Bag', '2020-11-12 06:27:25', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(47, 2, 'Leclerc Shopping Bag', 'leclerc bag.jpg', 'Leclerc Shopping Bag', '2020-11-12 06:28:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(48, 2, 'Tediber Shopping Bag', 'Tediber SHOPPING BAG.jpg', 'Tediber Shopping Bag', '2020-11-12 06:28:33', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(49, 3, 'May Tea', 'may tea.jpg', 'May Tea', '2020-11-12 06:29:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(50, 4, 'as', 'as.jpg', 'as', '2020-11-12 06:30:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(51, 4, 'Beaute Tote Bag', 'BEAUTE TOTE BAG.jpg', 'Beaute Tote Bag', '2020-11-12 06:31:38', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(52, 4, 'Bird Tote Bag', 'bird TOTE BAG.jpg', 'Bird Tote Bag', '2020-11-12 06:32:28', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(53, 4, 'INQ - 22-18 Tote Bag', 'INQ - 22-18 - TOTE BAG.jpg', 'INQ - 22-18 Tote Bag', '2020-11-12 06:33:10', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(54, 4, 'INQ 95-18 Leclerc Bio 201906 - Tote Bag', 'INQ 95-18 LECLERC BIO  201906 - TOTE BAG.jpg', 'INQ 95-18 Leclerc Bio 201906 - Tote Bag', '2020-11-12 06:34:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(55, 4, 'Leclerc Espace Culturel Tote Bag', 'LECLERC ESPACE CULTUREL - TOTE BAG.jpg', 'Leclerc Espace Culturel Tote Bag', '2020-11-12 06:35:49', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(56, 4, 'Tissaia Tote Bag', 'TISSAIA - TOTE BAG.jpg', 'Tissaia Tote Bag', '2020-11-12 06:36:25', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(57, 5, 'INQ - 20-18 - Pouch 2', 'INQ - 20-18 - POUCH 2.png', 'INQ - 20-18 - Pouch 2', '2020-11-12 06:42:25', '2020-11-12 06:42:25', '0000-00-00 00:00:00'),
-(58, 5, 'INQ - 20-18 - Pouch 3', 'INQ - 20-18 - POUCH 3.png', 'INQ - 20-18 - Pouch 3', '2020-11-12 06:41:20', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(59, 5, 'INQ - 22-18 - Pouch', 'INQ - 22-18 - POUCH.jpg', 'INQ - 22-18 - Pouch', '2020-11-12 06:41:48', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(1, 1, 'Cosmetic Pouch', 'Cosmetic pouch (2).jpg', 'Cosmetic Pouch', '2020-12-01 09:52:42', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 1, 'Cosmetic Pouch 2', 'Cosmetic pouch (3).jpg', 'Cosmetic Pouch 2', '2020-12-01 09:53:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 1, 'Cosmetic Pouch 3', 'Cosmetic pouch (4).jpg', 'Cosmetic Pouch 3', '2020-12-01 09:54:17', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 1, 'Cosmetic Pouch 4', 'Cosmetic pouch (5).jpg', 'Cosmetic Pouch 4', '2020-12-01 09:55:42', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 2, 'ISO Bag', 'ISO bag  (1).jpg', 'ISO Bag', '2020-12-01 09:56:30', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 2, 'ISO Bag 2', 'ISO bag  (3).jpg', 'ISO Bag 2', '2020-12-01 09:56:52', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(7, 3, 'Shopping Bag', 'Shopping bag (1).jpg', 'Shopping Bag', '2020-12-01 09:57:45', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(8, 3, 'Shopping Bag 2', 'Shopping bag (2).jpg', 'Shopping Bag 2', '2020-12-01 09:58:04', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(9, 3, 'Shopping Bag 3', 'Shopping bag (3).jpg', 'Shopping Bag 3', '2020-12-01 09:58:23', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(10, 3, 'Shopping Bag 4', 'Shopping bag (4).jpg', 'Shopping Bag 4', '2020-12-01 09:58:43', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(11, 4, 'Tote Bag', 'tote bag  (1).jpg', 'Tote Bag', '2020-12-01 10:00:41', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(12, 4, 'Tote Bag 2', 'tote bag  (2).jpg', 'Tote Bag 2', '2020-12-01 10:01:03', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(13, 4, 'Tote Bag 3', 'tote bag  (3).jpg', 'Tote Bag 3', '2020-12-01 10:01:22', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(14, 5, 'Vegetable and Fruit Bag', 'Veg and fruit bag  (1).jpg', 'Vegetable and Fruit Bag', '2020-12-01 10:01:55', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(15, 5, 'Vegetable and Fruit Bag 2', 'Veg and fruit bag  (2).jpg', 'Vegetable and Fruit Bag 2', '2020-12-01 10:02:13', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(16, 5, 'Vegetable and Fruit Bag 3', 'Veg and fruit bag  (3).jpg', 'Vegetable and Fruit Bag 3', '2020-12-01 10:02:31', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -202,7 +206,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `certifications`
 --
 ALTER TABLE `certifications`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `enquiries`
@@ -214,7 +218,7 @@ ALTER TABLE `enquiries`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `users`
